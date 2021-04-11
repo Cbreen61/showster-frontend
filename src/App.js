@@ -13,6 +13,10 @@ import ErrorPage from './components/Error';
 
 
 class App extends Component {
+  componentDidMount() {
+    this.props.getShows();
+  }
+
   render() {
     if (this.props.loading) {
       return (
