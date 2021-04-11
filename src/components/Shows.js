@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux';
 
 class Shows extends Component {
     render() {
@@ -10,4 +11,10 @@ class Shows extends Component {
     }
 }
 
-export default Shows
+const mapStateToProps = state => {
+    return {
+         shows: state.shows
+    }
+}
+
+export default connect(mapStateToProps)(Shows);
