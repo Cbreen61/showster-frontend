@@ -10,8 +10,8 @@ export const getShows = () => {
 
 export const addShow = (show, history) => {
     return dispatch => {
-        fetch("http://localhost:3001/shows", {
-            method: "POST"
+        fetch('http://localhost:3001/shows', {
+            method: "POST",
             headers: {
                 "Accept": "application/json",
                 "Content-Type": "application/json"

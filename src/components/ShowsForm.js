@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux';
+import { addShow } from '../actions/shows';
 
 class ShowsForm extends Component {
     state = {
@@ -20,6 +22,8 @@ class ShowsForm extends Component {
 
     handleSubmit = e => {
         e.preventDefault();
+
+        this.props.addShow(this.state, this.props.history)
     }
 
     render() {
@@ -59,4 +63,4 @@ class ShowsForm extends Component {
     }
 }
 
-export default ShowsForm
+export default connect(null,{ addShow })(ShowsForm);
