@@ -1,5 +1,5 @@
-export const getShows = () =>{
+export const getShows = () => {
     return dispatch => {
-        dispatch({ type: "LOADING" })
+      dispatch({ type: "LOADING" })
     }
-}
+  }

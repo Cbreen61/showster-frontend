@@ -13,9 +13,9 @@ import ErrorPage from './components/Error';
 
 
 class App extends Component {
-  render(){
+  render() {
     if (this.props.loading) {
-      return(
+      return (
         <h3>Loading...</h3>
       )
     }
