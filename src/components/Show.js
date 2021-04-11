@@ -2,17 +2,19 @@ import React, { Component } from 'react'
 
 class Show extends Component {
     render() {
-        const { title, status, realease_date, seasons, likes, dislikes, description, image } = this.props;
+        const { title, status, release_date, seasons, likes, dislikes, description, image } = this.props;
         return (
             <div>
                 <h3>{ title }</h3>
-                <li>{ status }</li>
-                <li>{ realease_date }</li>
-                <li>{ seasons }</li>
-                <li>{ likes }</li>
-                <li>{ dislikes }</li>
-                <li>{ image }</li>
-                <p>{ description }</p>
+                <li>Image: { image }</li>
+                <p>Description: { description }</p>
+                <li>Status: { status }</li>
+                <li>Release Date: { release_date }</li>
+                <li> Seasons: { seasons }</li>
+                <li>Likes: { likes }</li>
+                <li>Dislikes: { dislikes }</li>
+
+
             </div>
         )
     }
