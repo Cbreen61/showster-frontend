@@ -10,6 +10,12 @@ const showsReducer = (state=initialState, action) => {
             ...state,
             loading: true
           }
+        case "SET_SHOWS":
+            return {
+                ...state,
+                loading: false,
+                shows: action.shows
+            }
         default:
             return state;
     }
