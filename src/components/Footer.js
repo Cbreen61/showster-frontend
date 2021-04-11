@@ -4,7 +4,7 @@ class Footer extends Component {
     render() {
         return (
             <div>
-                
+                &copy; Property of CB Management. Totally Legit!
             </div>
         )
     }
