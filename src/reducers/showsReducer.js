@@ -9,3 +9,5 @@ const showsReducer = (state, action) => {
             return state;
     }
 }
+
+export default showsReducer;
