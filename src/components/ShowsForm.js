@@ -12,11 +12,21 @@ class ShowsForm extends Component {
         image: ""
     }
 
+    handleChange = e => {
+        this.setState({
+            [e.target.name]: e.target.value
+        })
+    }
+
+    handleSubmit = e => {
+        e.preventDefault();
+    }
+
     render() {
         return (
             <div>
                 <h3>Add New Show </h3>
-                <form>
+                <form onSubmit={ this.handleSubmit }>
                     <div>
                         <label htmlFor="title">Title: </label>
                         <input type="text" id="title" name="title" value={ this.state.title } onChange={ this.handleChange } />
