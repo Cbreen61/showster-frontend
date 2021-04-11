@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Footer from './components/Footer';
 import Nav from './components/Nav';
 
 
@@ -9,9 +10,9 @@ class App extends Component {
     return (
       <Router>
         <Nav />
-        <div className="App">
-          <h1>Can you see me </h1>
-        </div>
+        <Switch>
+        </Switch>
+        <Footer />
       </Router>
 
     );
