@@ -8,6 +8,7 @@ import Home from './components/Home';
 import About from './components/About';
 import Shows from "./components/Shows";
 import ErrorPage from './components/Error';
+import ShowsForm from './components/ShowsForm';
 
 
 
@@ -31,6 +32,7 @@ class App extends Component {
           <Route exact path="/" component={ Home } />
           <Route exact path="/about" component={ About } />
           <Route exact path="/shows" component={ Shows } />
+          <Route exact path="/shows/new" component={ ShowsForm } />
           <Route component={ErrorPage} />
         </Switch>
         <Footer />

@@ -4,7 +4,13 @@ class ShowsForm extends Component {
     render() {
         return (
             <div>
-                Form
+                <h3>Add New Show </h3>
+                <form>
+                    <div>
+                        <label>Title</label>
+                    </div>
+                </form>
+                
             </div>
         )
     }
