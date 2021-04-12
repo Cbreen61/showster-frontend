@@ -1,9 +1,11 @@
 import React, { Component } from 'react'
+import { Row } from 'react-bootstrap';
 
 class Footer extends Component {
     render() {
         return (
             <div>
+                <br></br>
                 &copy; Property of CB Management. Totally Legit!
             </div>
         )
