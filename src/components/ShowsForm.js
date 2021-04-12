@@ -30,7 +30,9 @@ class ShowsForm extends Component {
     render() {
         return (
             <div>
-                <h3>Add New Show </h3>
+                <Row className="justify-content-md-center">
+                    <h3>Add New Show </h3>
+                </Row>
                 <Form onSubmit={ this.handleSubmit }>
                     <Row>
                     <Form.Group as={Col} controlId="formGridTitle">

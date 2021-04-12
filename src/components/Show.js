@@ -14,7 +14,6 @@ class Show extends Component {
                         <Card.Text>
                             { description }
                         </Card.Text>
-                        <Button variant="primary">Go somewhere</Button>
                     </Card.Body>
                     <footer className="text-muted">
                         Seasons: { seasons }
