@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Col, Row, Form, Button } from 'react-bootstrap';
 import { connect } from 'react-redux';
 import { addShow } from '../actions/shows';
 
@@ -30,35 +31,44 @@ class ShowsForm extends Component {
         return (
             <div>
                 <h3>Add New Show </h3>
-                <form onSubmit={ this.handleSubmit }>
-                    <div>
-                        <label htmlFor="title">Title: </label>
-                        <input type="text" id="title" name="title" value={ this.state.title } onChange={ this.handleChange } />
-                    </div>
-                    <div>
-                        <label htmlFor="status">Show Status: </label>
-                        <input type="text" id="status" name="status" value={ this.state.status } onChange={ this.handleChange } />
-                    </div>
-                    <div>
-                        <label htmlFor="release_date">Release Date: </label>
-                        <input type="date" id="release_date" name="release_date" value={ this.state.release_date } onChange={ this.handleChange } />
-                    </div>
-                    <div>
-                        <label htmlFor="seasons"># Of Seasons: </label>
-                        <input type="number" id="seasons" name="seasons" value={ this.state.seasons } onChange={ this.handleChange } />
-                    </div>
-                    <div>
-                        <label htmlFor="image">Image: </label>
-                        <input type="text" id="image" name="image" value={ this.state.image } onChange={ this.handleChange } />
-                    </div>
-                    <div>
-                        <label htmlFor="description">Description: </label>
-                        <textarea id="description" name="description" value={ this.state.description } onChange={ this.handleChange } ></textarea>
-                    </div>
-                    <input type="submit" value="Add Show" />
-                </form>
-                
+                <Form onSubmit={ this.handleSubmit }>
+                    <Row>
+                    <Form.Group as={Col} controlId="formGridTitle">
+                        <Form.Label>Title</Form.Label>
+                        <Form.Control type="text" placeholder="Enter title" id="title" name="title" value={ this.state.title } onChange={ this.handleChange } />
+                    </Form.Group>
+
+                    <Form.Group as={Col} controlId="formGridStatus">
+                        <Form.Label>Status</Form.Label>
+                        <Form.Control type="text" placeholder="Enter show status" id="status" name="status" value={ this.state.status } onChange={ this.handleChange } />
+                    </Form.Group>
+                    <Form.Group as={Col} controlId="formGridRelease_date">
+                        <Form.Label>Release Date</Form.Label>
+                        <Form.Control type="date" id="release_date" name="release_date" value={ this.state.release_date } onChange={ this.handleChange } />
+                    </Form.Group>
+
+                    </Row>
+                    <Row>
+                    <Form.Group as={Col} controlId="formGridSeasons">
+                        <Form.Label>Seasons</Form.Label>
+                        <Form.Control type="number" placeholder="number of seasons" id="seasons" name="seasons" value={ this.state.seasons } onChange={ this.handleChange } />
+                    </Form.Group>
+
+                    <Form.Group as={Col} controlId="formGridImage">
+                        <Form.Label>Image</Form.Label>
+                        <Form.Control type="text" placeholder="Enter Image Link" id="image" name="image" value={ this.state.image } onChange={ this.handleChange } />
+                    </Form.Group>
+                    <Form.Group as={Col} controlId="formDescription">
+                        <Form.Label>Description</Form.Label>
+                        <Form.Control as="textarea" rows={3}  id="description" name="description" value={ this.state.description } onChange={ this.handleChange } />
+                    </Form.Group>
+                    </Row>
+                    <Button variant="secondary" type="submit">
+                        Add Show
+                    </Button>
+                </Form>
             </div>
+            
         )
     }
 }
