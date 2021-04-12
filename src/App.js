@@ -9,6 +9,7 @@ import About from './components/About';
 import Shows from "./components/Shows";
 import ErrorPage from './components/Error';
 import ShowsForm from './components/ShowsForm';
+import Show from './components/Show';
 
 
 
@@ -19,6 +20,7 @@ class App extends Component {
   }
 
   render() {
+    const { shows } = this.props
     if (this.props.loading) {
       return (
         <h3>Loading...</h3>
@@ -33,6 +35,11 @@ class App extends Component {
           <Route exact path="/about" component={ About } />
           <Route exact path="/shows" component={ Shows } />
           <Route exact path="/shows/new" component={ ShowsForm }/>
+          <Route exact path='/shows/:id' render={props => {
+            const show = shows.find(show => show.id === props.match.params.id)
+            console.log(show)
+            return <Show show={show} {...props} />
+          }}/>
           <Route component={ErrorPage} />
         </Switch>
         <Footer />
@@ -43,9 +50,10 @@ class App extends Component {
 }
 
 const mapStateToProps = state => {
-  return {
-    loading: state.loading
-  }
+  return ({
+    loading: state.loading,
+    shows: state.shows
+  })
 }
 
 export default connect(mapStateToProps, { getShows })(App);
