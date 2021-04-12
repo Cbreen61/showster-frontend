@@ -14,6 +14,7 @@ import ShowsForm from './components/ShowsForm';
 
 
 class App extends Component {
+  
   componentDidMount() {
     this.props.getShows();
   }
