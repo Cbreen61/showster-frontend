@@ -9,7 +9,7 @@ import About from './components/About';
 import Shows from "./components/Shows";
 import ErrorPage from './components/Error';
 import ShowsForm from './components/ShowsForm';
-import Show from './components/Show';
+import Show from './components/Show'
 
 
 

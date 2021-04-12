@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 class Show extends Component {
     render() {
-        const { id, title, status, release_date, seasons, likes, dislikes, description, image } = this.props;
+        const {  title, status, release_date, seasons, description, image, characters } = this.props;
         return (
             <div>
                 <h3>{ title }</h3>
@@ -12,9 +12,7 @@ class Show extends Component {
                 <li>Status: { status }</li>
                 <li>Release Date: { release_date }</li>
                 <li> Seasons: { seasons }</li>
-                <li>Likes: { likes }</li>
-                <li>Dislikes: { dislikes }</li>
-                <Link to={`/shows/${id}/characters`}>characters</Link>
+                <li> Characters: { characters }</li>
 
 
             </div>
