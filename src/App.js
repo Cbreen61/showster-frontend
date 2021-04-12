@@ -14,7 +14,6 @@ import ShowsForm from './components/ShowsForm';
 
 
 class App extends Component {
-  
   componentDidMount() {
     this.props.getShows();
   }
@@ -33,7 +32,7 @@ class App extends Component {
           <Route exact path="/" component={ Home } />
           <Route exact path="/about" component={ About } />
           <Route exact path="/shows" component={ Shows } />
-          <Route exact path="/shows/new" component={ ShowsForm } />
+          <Route exact path="/shows/new" component={ ShowsForm }/>
           <Route component={ErrorPage} />
         </Switch>
         <Footer />

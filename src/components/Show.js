@@ -6,7 +6,7 @@ class Show extends Component {
         return (
             <div>
                 <h3>{ title }</h3>
-                <img src={ image }></img>
+                <img src={ image } alt=""></img>
                 <p>Description: { description }</p>
                 <li>Status: { status }</li>
                 <li>Release Date: { release_date }</li>

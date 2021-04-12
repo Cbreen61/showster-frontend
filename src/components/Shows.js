@@ -7,6 +7,7 @@ class Shows extends Component {
         const shows = this.props.shows.map( (show, i) => <Show key={i} title={show.title} status={show.status} release_date={show.release_date} seasons={show.seasons} likes={show.likes} dislikes={show.dislikes} description={show.description} image={show.image} />)
         return (
             <div>
+                
                 { shows }
             </div>
         )
