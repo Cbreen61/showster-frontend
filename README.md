@@ -1,3 +1,28 @@
+# Showster 
+Showster is a react application that allows users to navigate throught their favorite shows and add more shows that we missed.
+## To Start 
+
+First, start the rails API: (Link to Backend Repo: https://github.com/Cbreen61/showster-backend
+
+cd showster-backend
+bundle
+rails db:migrate
+rails db:seed
+rails s
+
+### Next, follow these steps before running yarn start
+
+cd showster-frontend
+yarn  start
+you may be asked if you want to start on a different port, select yes
+
+
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
