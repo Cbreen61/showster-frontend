@@ -3,13 +3,14 @@ import { connect } from 'react-redux';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { getShows } from './actions/shows'
 import Footer from './components/Footer';
-import Nav from './components/Nav';
+import Navbar from './components/Navbar';
 import Home from './components/Home';
 import About from './components/About';
 import Shows from "./components/Shows";
 import ErrorPage from './components/Error';
 import ShowsForm from './components/ShowsForm';
 import Show from './components/Show'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 
@@ -29,7 +30,7 @@ class App extends Component {
 
     return (
       <Router>
-        <Nav />
+        <Navbar />
         <Switch>
           <Route exact path="/" component={ Home } />
           <Route exact path="/about" component={ About } />
