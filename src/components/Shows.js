@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Col, Container, Row } from 'react-bootstrap';
+import { CardDeck, Col, Container, Row } from 'react-bootstrap';
 import { connect } from 'react-redux';
 import Show from './Show';
 
@@ -8,14 +8,14 @@ class Shows extends Component {
         const shows = this.props.shows.map( (show, i) => <Show key={i} id={show.id} title={show.title} status={show.status} release_date={show.release_date} seasons={show.seasons}  description={show.description} image={show.image} />)
         return (
             <div>
+                
                 <Row className="justify-content-md-center">
                     <h2> Shows </h2>
                 </Row>
-                <Container fluid="md">
-                    <Row className="justify-content-md-center">
-                        <Col md={10}>{ shows } </Col>
-                    </Row>
-                </Container>
+                <CardDeck>
+                    { shows }
+
+                </CardDeck>
             </div>
         )
     }
