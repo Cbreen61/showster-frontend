@@ -3,7 +3,7 @@ import { Card, Button } from 'react-bootstrap';
 
 class Show extends Component {
     render() {
-        const {  title, status, release_date, seasons, description, image, characters } = this.props;
+        const {  title, status, release_date, seasons, description, image } = this.props;
         return (
             <div>
                 <Card style={{ width: '30rem' }}>
