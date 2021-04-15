@@ -21,6 +21,15 @@ const showsReducer = (state=initialState, action) => {
                 ...state,
                 shows: [...state.shows, action.show]
             }
+        case "ADD_CHARACTER":
+        let shows = state.shows.map(show => {
+        if (show.id === action.payload.id) {
+          return action.payload
+        } else {
+          return show
+        }
+      })
+      return {...state, shows: shows}
         default:
             return state;
     }
