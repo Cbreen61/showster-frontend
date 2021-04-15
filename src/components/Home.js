@@ -9,7 +9,7 @@ class Home extends Component {
                 <Row className="justify-content-md-center">
                     <h1>Welcome to Showster </h1>
                 </Row>
-                
+
             </div>
         )
     }
