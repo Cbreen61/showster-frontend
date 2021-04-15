@@ -1,17 +1,16 @@
 import React, { Component } from 'react'
-import { Nav } from 'react-bootstrap';
+import { Nav, Navbar } from 'react-bootstrap';
 
 
-class Navbar extends Component {
+class Navigationbar extends Component {
     render() {
         return (
             <div>
-                <Nav className="justify-content-center" variant="pills" defaultActiveKey="">
+                <Navbar bg="dark" variant="dark" fixed="top" >
+                <Navbar.Brand href="/">Showster</Navbar.Brand>
+                <Nav className="mr-auto" >
                 <Nav.Item>
-                    <Nav.Link href="/">Home</Nav.Link>
-                </Nav.Item>
-                <Nav.Item>
-                    <Nav.Link eventKey="/about" href="/about">About</Nav.Link>
+                    <Nav.Link href="/about">About</Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
                     <Nav.Link href="/shows">Shows</Nav.Link>
@@ -20,10 +19,11 @@ class Navbar extends Component {
                     <Nav.Link href="/shows/new">Add New Show</Nav.Link>
                 </Nav.Item>
                 </Nav>
-                
+                </Navbar>
+                <br></br>
             </div>
         )
     }
 }
 
-export default Navbar
+export default Navigationbar

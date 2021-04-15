@@ -6,6 +6,7 @@ const Shows = (props) => {
 
     return (
         <div>
+            <br></br>
             {props.shows.map(show =>
                 <li key={show.id}>
                     <Link to={`/shows/${show.id}`}>{show.title}</Link>

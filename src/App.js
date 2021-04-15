@@ -11,6 +11,7 @@ import ErrorPage from './components/Error';
 import ShowsForm from './components/ShowsForm';
 import Show from './components/Show'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Navigationbar from './components/Navbar';
 
 
 
@@ -29,7 +30,8 @@ class App extends Component {
 
     return (
       <Router>
-        <Navbar />
+        <Navigationbar />
+        <br></br>
         <Switch>
           <Route exact path="/" component={ Home } />
           <Route exact path="/about" component={ About } />

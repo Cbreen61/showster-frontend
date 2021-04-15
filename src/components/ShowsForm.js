@@ -30,6 +30,7 @@ class ShowsForm extends Component {
     render() {
         return (
             <div>
+                <br></br>
                 <h3>Add New Show </h3>
                 <Form onSubmit={ this.handleSubmit }>
                     <Row>
