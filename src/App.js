@@ -21,7 +21,6 @@ class App extends Component {
   }
 
   render() {
-    const { shows } = this.props
     if (this.props.loading) {
       return (
         <h3>Loading...</h3>
@@ -34,13 +33,9 @@ class App extends Component {
         <Switch>
           <Route exact path="/" component={ Home } />
           <Route exact path="/about" component={ About } />
-          <Route exact path="/shows" component={ Shows } />
           <Route exact path="/shows/new" component={ ShowsForm }/>
-          <Route exact path='/shows/:id' render={props => {
-            const show = shows.find(show => show.id === props.match.params.id)
-            console.log(show)
-            return <Show show={show} {...props} />
-          }}/>
+          <Route exact path="/shows" render={(routerProps) => <Shows {...routerProps} shows={this.props.shows}/>}/>
+          <Route exact path='/shows/:id' render={(routerProps) => <Show {...routerProps} shows={this.props.shows}/>}/>
           <Route component={ErrorPage} />
         </Switch>
         <Footer />
