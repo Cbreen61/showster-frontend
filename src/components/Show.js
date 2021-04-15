@@ -1,30 +1,42 @@
-import React, { Component } from 'react'
-import { Card } from 'react-bootstrap';
+import React from 'react'
+import { Card, Jumbotron } from 'react-bootstrap';
+import Characters from './Characters';
 
-class Show extends Component {
-    render() {
-        const {  title, status, release_date, seasons, description, image } = this.props;
-        return (
+
+const Show = (props) => {
+    let show = props.shows[props.match.params.id -1]
+
+
+    return (
+
             <div>
-                <Card style={{ width: '30rem' }}>
-                    <Card.Img variant="top" src={ image } alt="" />
+                <Jumbotron fluid>
+                    <Card.Img variant="top" src={ show.image } alt="" />
                     <Card.Body>
-                        <Card.Title>{ title }</Card.Title>
-                        <Card.Subtitle className="mb-2 text-muted">{ status }</Card.Subtitle>
+                        <Card.Title>{ show.title }</Card.Title>
+                        <Card.Subtitle className="mb-2 text-muted">{ show.status }</Card.Subtitle>
                         <Card.Text>
-                            { description }
+                            { show.description }
                         </Card.Text>
+
                     </Card.Body>
                     <footer className="text-muted">
-                        Seasons: { seasons }
+                        Seasons: { show.seasons }
                         <br></br>
-                        Release Date: { release_date }  
-                    </footer>
-                </Card>
+                        Release Date: { show.release_date }  
+                    </footer>  
+                </Jumbotron>
                 <br></br>
+                < Characters show={show}/>    
+
+                
+                
+                
+
             </div>
-        )
-    }
+    )
+
+
 }
 
 export default Show
